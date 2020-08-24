@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Aplikasi MRR',
+      home: new SettingAppbar(),
+    ),
+  );
+}
+
+class SettingAppbar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange[800],
+        title: new Text("5SIC7-tika"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.chat_bubble),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.build),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: const <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.pink,
+                ),
+                child: Text(
+                  'kartika sari theresia tarigan',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.message),
+                title: Text('Pesan'),
+              ),
+              ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('Tentang Saya'),
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Pengaturan'),
+              ),
+            ],
+          ),
+        ),
+    );
+  }
+}
